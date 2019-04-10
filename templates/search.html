@@ -1,0 +1,10 @@
+<div>
+    <h3>I found {{ no_jobs }} jobs matching {{ search_term }}</h3>
+</div>
+<table>
+    {% for job in jobs %}
+        <tr>
+            <td><a href="/details/{{ job['soc_id'] }}">{{ job['title'] }}</a></td>
+        </tr>
+    {% endfor %}
+</table>

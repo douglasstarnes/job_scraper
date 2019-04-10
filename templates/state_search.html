@@ -1,0 +1,8 @@
+<form action="/state" method="POST">
+    <select name="state">
+        {% for state in states %}
+            <option value="{{ state }}">{{ state }}</option>
+        {% endfor %}
+    </select>
+    <input type="submit" value="Search"/>
+</form>

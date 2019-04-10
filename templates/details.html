@@ -1,0 +1,45 @@
+<html>
+    <head>
+        <title>Details</title>
+    </head>
+    <body>
+        <table>
+            <tr>
+                <td>Title</td><td>{{ title }}</td>
+            </tr>
+            <tr>
+                <td>Company</td><td>{{ company }}</td>
+            </tr>
+            <tr>
+                <td>City</td><td>{{ city }}</td>
+            </tr>
+            <tr>
+                <td>State</td><td>{{ state }}</td>
+            </tr>
+            <tr>
+                <td>Remote</td>
+                <td>
+                    {% if remote == true %}
+                        <img src="{{ url_for('static', filename='checked.png') }}" height="16" width="16"/>
+                    {% else %}
+                        <img src="{{ url_for('static', filename='no-stopping.png') }}" height="16" width="16"/>                    
+                    {% endif %}
+                </td>
+            </tr>
+            <tr>
+                <td>Relocation</td>
+                <td>
+                    {% if relocation == true %}
+                        <img src="{{ url_for('static', filename='checked.png') }}" height="16" width="16"/>
+                    {% else %}
+                        <img src="{{ url_for('static', filename='no-stopping.png') }}" height="16" width="16"/>                    
+                    {% endif %} 
+                </td>
+            </tr>
+            <tr>
+                <td>Tags</td>
+                <td>{{ tags }}</td>
+            </tr>
+        </table>
+    </body>
+</html>
